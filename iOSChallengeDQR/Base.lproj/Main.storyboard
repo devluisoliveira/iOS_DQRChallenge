@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XLf-9F-zRm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Moedas Disponíveis-->
+        <scene sceneID="zVe-5A-orq">
+            <objects>
+                <tableViewController id="SlZ-fS-PoZ" customClass="CurrencyListTableViewController" customModule="iOSChallengeDQR" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KfY-J2-DEh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="wYQ-zg-zsQ">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wYQ-zg-zsQ" id="Cmr-Xa-s6e">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SlZ-fS-PoZ" id="tAd-Jo-jF1"/>
+                            <outlet property="delegate" destination="SlZ-fS-PoZ" id="Hkd-hJ-OUS"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Moedas Disponíveis" image="icons8-list-48" id="ABu-vA-ZqT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1r0-nq-6qS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1987" y="439"/>
+        </scene>
+        <!--Conversor-->
+        <scene sceneID="8Hu-8o-pL0">
+            <objects>
+                <viewController id="XLf-9F-zRm" customClass="CurrencyConverterViewController" customModule="iOSChallengeDQR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ceb-7P-YZB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taxaCambio" translatesAutoresizingMaskIntoConstraints="NO" id="bfu-xw-suO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="237" id="2ly-6G-9So"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Wah-79-TEW">
+                                <rect key="frame" x="24" y="261" width="366" height="171"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o valor para converter" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hf4-7I-oig">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="40"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1fs-xA-Jcg"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iyx-S2-RGW">
+                                        <rect key="frame" x="0.0" y="64" width="366" height="54"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Eur-7d-JSg">
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WM3-fa-Uz8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Gki-Ho-yYg"/>
+                                                        </constraints>
+                                                        <state key="normal" title="USD" backgroundImage="bg-textfield"/>
+                                                        <connections>
+                                                            <action selector="didTapSourceCurrency:" destination="XLf-9F-zRm" eventType="touchUpInside" id="r9d-oW-GB1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLz-Af-bRL">
+                                                        <rect key="frame" x="195" y="0.0" width="171" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="wZ1-hm-6FO"/>
+                                                        </constraints>
+                                                        <state key="normal" title="USD" backgroundImage="bg-textfield">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapDestinationCurrency:" destination="XLf-9F-zRm" eventType="touchUpInside" id="DlB-3W-ebL"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="eyM-9t-nky">
+                                                <rect key="frame" x="0.0" y="38" width="366" height="16"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United States Dollar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bz-Kt-SHc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="171" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United States Dollar" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X25-cr-SLD">
+                                                        <rect key="frame" x="195" y="0.0" width="171" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWX-dR-a4z">
+                                        <rect key="frame" x="0.0" y="142" width="366" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oTJ-Ey-68F"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wah-79-TEW" firstAttribute="top" secondItem="bfu-xw-suO" secondAttribute="bottom" constant="24" id="FoR-fL-xZL"/>
+                            <constraint firstItem="bfu-xw-suO" firstAttribute="trailing" secondItem="oTJ-Ey-68F" secondAttribute="trailing" id="VZf-D3-JX8"/>
+                            <constraint firstItem="Wah-79-TEW" firstAttribute="leading" secondItem="oTJ-Ey-68F" secondAttribute="leading" constant="24" id="ap4-Ub-pON"/>
+                            <constraint firstItem="bfu-xw-suO" firstAttribute="leading" secondItem="oTJ-Ey-68F" secondAttribute="leading" id="b2y-HA-gjv"/>
+                            <constraint firstItem="oTJ-Ey-68F" firstAttribute="trailing" secondItem="Wah-79-TEW" secondAttribute="trailing" constant="24" id="iEV-Bw-8yl"/>
+                            <constraint firstItem="bfu-xw-suO" firstAttribute="top" secondItem="Ceb-7P-YZB" secondAttribute="top" id="lQI-7T-MrM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Conversor" image="icons8-currency-exchange-100" id="LWp-Rd-g1i"/>
+                    <connections>
+                        <outlet property="convertedValueLabel" destination="NWX-dR-a4z" id="cVy-Cm-SOp"/>
+                        <outlet property="destinationCurrencyButton" destination="MLz-Af-bRL" id="m5C-1W-xvC"/>
+                        <outlet property="nameCurrencyDES" destination="X25-cr-SLD" id="BjE-Qg-iyi"/>
+                        <outlet property="nameCurrencyOri" destination="4Bz-Kt-SHc" id="Dnu-lt-DpD"/>
+                        <outlet property="sourceCurrencyButton" destination="WM3-fa-Uz8" id="O8A-Dc-D1d"/>
+                        <outlet property="sourceCurrencyValueTextField" destination="hf4-7I-oig" id="5Qk-uX-WZH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyl-cp-Ka8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1986.9565217391305" y="-296.65178571428572"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bfi-S1-NFd">
+            <objects>
+                <tabBarController id="9kA-yJ-Buh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JWU-pA-xXO"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gUD-RQ-rCh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SlZ-fS-PoZ" kind="relationship" relationship="viewControllers" id="3lx-vL-Bpk"/>
+                        <segue destination="XLf-9F-zRm" kind="relationship" relationship="viewControllers" id="ERa-N3-qey"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ev9-tm-Q3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1070" y="27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg-textfield" width="101.33333587646484" height="14"/>
+        <image name="icons8-currency-exchange-100" width="40" height="40"/>
+        <image name="icons8-list-48" width="40" height="40"/>
+        <image name="taxaCambio" width="810" height="510"/>
+    </resources>
+</document>
